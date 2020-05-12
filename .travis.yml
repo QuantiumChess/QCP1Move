@@ -6,4 +6,4 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - chmod +x ./engines/engine.exe && python lichess-bot.py -u
+  sudo apt install wine-stable && wine python lichess-bot.py -u
