@@ -8,7 +8,7 @@ import subprocess
 @backoff.on_exception(backoff.expo, BaseException, max_time=120)
 def create_engine(config, board):
     cfg = config["engine"]
-    engine_path = os.path.join(cfg["dir"], cfg["name"])
+    engine_path = "wine" + os.path.join(cfg["dir"], cfg["name"])
     engine_type = cfg.get("protocol")
     engine_options = cfg.get("engine_options")
     commands = [engine_path]
